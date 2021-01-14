@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip3 install -r requirements.txt
+script:
+  - python3 manage.py test catalog/tests/unit_tests
+  - python3 manage.py test catalog/tests/integration_tests
+  - python3 manage.py test catalog/tests/e2e_test
