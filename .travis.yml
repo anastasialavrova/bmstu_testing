@@ -5,7 +5,7 @@ install:
   - pip install -r requirements.txt
 script:
   - python unit/unit_tests.py
-  # - python integration/manage.py
-  - python integration/manage_2.py
+  - python integration/manage.py
+  # - python integration/manage_2.py
   # - sudo python integration/api.py & sudo python integration/integration_tests.py &
   # - sudo python integration/api.py & sudo python integration/e2e_tests.py 
