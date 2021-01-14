@@ -61,7 +61,7 @@ app.config['SWAGGER'] = {
     "route": '/apispec_1.json'
 }
 # swagger = Swagger(app, template=template)
-app.config.from_object(config.Config)
+# app.config.from_object(config.Config)
 api = Api(app, version='2.0', title='Sample API',
     description='A sample API')
 
