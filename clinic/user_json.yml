@@ -1,0 +1,33 @@
+        tags:
+          - Flast Restful APIs
+        parameters:
+          - name: login
+            in: query
+            type: string
+            required: true
+            description: users login
+          - name: password
+            in: query
+            type: string
+            required: true
+            description: users password
+        responses:
+          200:
+            description:
+            schema:
+              id: user
+              properties:
+                id_sign:
+                  type: int
+                  description: users id
+                sign_login:
+                  type: string
+                  description: users login
+                sign_password:
+                  type: string
+                  description: users password
+                sign_role:
+                  type: int
+                  description: users role
+
+

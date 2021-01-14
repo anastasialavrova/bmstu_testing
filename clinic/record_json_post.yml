@@ -1,0 +1,28 @@
+        tags:
+          - Flast Restful APIs
+        parameters:
+          - name: rec_login
+            in: query
+            type: string
+            required: true
+            description: news heading
+          - name: rec_diag
+            in: query
+            type: string
+            required: true
+            description: news text
+        responses:
+          200:
+            description:
+            schema:
+              id: records
+              properties:
+                id_rec:
+                  type: int
+                  description: records id
+                rec_login:
+                  type: string
+                  description: patient login
+                rec_diag:
+                  type: string
+                  description: patient diagnosis

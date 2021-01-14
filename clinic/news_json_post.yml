@@ -1,0 +1,30 @@
+        tags:
+          - Flast Restful APIs
+        parameters:
+          - name: news_title
+            in: query
+            type: string
+            required: true
+            description: news heading
+          - name: news_text
+            in: query
+            type: string
+            required: true
+            description: news text
+        responses:
+          200:
+            description:
+            schema:
+              id: news
+              properties:
+                id_news:
+                  type: int
+                  description: news id
+                news_title:
+                  type: string
+                  description: news heading
+                news_text:
+                  type: string
+                  description: news text
+
+

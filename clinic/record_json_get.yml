@@ -1,0 +1,19 @@
+        tags:
+          - Flast Restful APIs
+        responses:
+          200:
+            description:
+            schema:
+              id: records
+              properties:
+                id_rec:
+                  type: int
+                  description: records id
+                rec_login:
+                  type: string
+                  description: patient login
+                rec_diag:
+                  type: string
+                  description: patient diagnosis
+
+

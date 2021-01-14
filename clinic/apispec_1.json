@@ -1,0 +1,182 @@
+{
+    "swagger": "2.0",
+    "basePath": "/",
+    "paths": {
+        "/doctors": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_doctors_api",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/doctors/id": {
+            "patch": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "patch_doctors_patch_api",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/news": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "post_news_api",
+                "tags": [
+                    "default"
+                ]
+            },
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_news_api",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/records": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "post_record_api",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/records/id": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_record_get_api",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/secret": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_secret_resource",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/token/refresh": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "post_token_refresh",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/user_login": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "post_user_api_login",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/user_registration": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "post_user_api_registration",
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        "/users": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_all_users",
+                "tags": [
+                    "default"
+                ]
+            },
+            "delete": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "delete_all_users",
+                "tags": [
+                    "default"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "API",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "default",
+            "description": "Default namespace"
+        }
+    ],
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}

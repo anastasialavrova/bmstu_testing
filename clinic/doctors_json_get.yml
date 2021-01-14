@@ -1,0 +1,22 @@
+        tags:
+          - Flast Restful APIs
+        responses:
+          200:
+            description:
+            schema:
+              id: doctors
+              properties:
+                id_doc:
+                  type: int
+                  description: doctors id
+                doc_name:
+                  type: string
+                  description: Doctor‘s name
+                doc_spec:
+                  type: string
+                  description: Doctor‘s specialization
+                doc_about:
+                  type: string
+                  description: Information about the doctor
+
+

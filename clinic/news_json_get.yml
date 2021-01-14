@@ -1,0 +1,19 @@
+        tags:
+          - Flast Restful APIs
+        responses:
+          200:
+            description:
+            schema:
+              id: news
+              properties:
+                id_news:
+                  type: int
+                  description: news id
+                news_title:
+                  type: string
+                  description: news heading
+                news_text:
+                  type: string
+                  description: news text
+
+
