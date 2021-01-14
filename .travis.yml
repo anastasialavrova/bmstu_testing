@@ -5,6 +5,6 @@ install:
   - pip install -r requirements.txt
 script:
   - python unit/unit_tests.py
-  - pip show mock
-  - sudo python integration/api.py & sudo python integration/integration_tests.py &
+  - python integration/manage.py
+  # - sudo python integration/api.py & sudo python integration/integration_tests.py &
   # - sudo python integration/api.py & sudo python integration/e2e_tests.py 
