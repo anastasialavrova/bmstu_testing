@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_required, jwt_refresh_token_required, get_jwt_identity,  get_raw_jwt)
 
 
-from env import app, login_manager
+from env import app, api, login_manager
 from models import News, Doctors, Record, User
 
 
@@ -236,5 +236,3 @@ api.add_resource(TokenRefresh, '/token/refresh')
 
 if __name__ == "__main__":
     app.run(debug=True)
-    # app.run(host='127.0.0.1', port=5001)
-    # app.run(host='127.0.0.1', port=5002)

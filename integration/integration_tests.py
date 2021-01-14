@@ -4,7 +4,7 @@ import json
 from mock import patch
 
 
-from env import app
+from env import app, api
 from api import AddDiagnosis, Users
 from models import User
 
