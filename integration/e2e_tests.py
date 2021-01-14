@@ -66,7 +66,7 @@ with app.app_context():
         def test_sign_in_user(self, find_in_db):
                 user = Users('login1', 'password1')
                 assert user.sign_up(find_in_db) == 'user_space'
-                ''''
+                '''
 
         def test_get_news(self):
             expected_result = "Ok"
