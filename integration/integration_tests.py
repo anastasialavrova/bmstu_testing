@@ -2,7 +2,7 @@ import unittest
 import requests
 import json
 from mock import patch
-from env import app, api
+from env import app, api, db
 from api import AddDiagnosis, Users
 from models import User
 
@@ -28,6 +28,8 @@ with app.app_context():
     class TestIntegrations(unittest.TestCase):
         def setUp(self):
             self.app = app.test_client()
+            app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+            db.create_all()
 
         def test_get_users_status(self):
             expected_result = {"message": "List of news"}
@@ -52,6 +54,10 @@ with app.app_context():
         def test_sign_in_user(self, find_in_db):
                 user = Users('login1', 'password1')
                 assert user.sign_up(find_in_db) == 'user_space'
+
+        def tearDown(self):
+            db.session.remove()
+            db.drop_all()
 
 
 if __name__ == '__main__':
