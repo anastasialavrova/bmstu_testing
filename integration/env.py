@@ -3,6 +3,11 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from collections import namedtuple
 
+from flask_restplus import Api
+from flasgger import Swagger
+from flask_jwt_extended import JWTManager
+import config
+
 app = Flask(__name__)
 app.secret_key = 'i love bmstu'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clinic.db'
@@ -60,8 +65,8 @@ app.config['SWAGGER'] = {
     "specs_route": "/",
     "route": '/apispec_1.json'
 }
-# swagger = Swagger(app, template=template)
-# app.config.from_object(config.Config)
+swagger = Swagger(app, template=template)
+app.config.from_object(config.Config)
 api = Api(app, version='2.0', title='Sample API',
     description='A sample API')
 
