@@ -1,7 +1,7 @@
 import unittest
 import requests
 import os
-from mock import patch
+# from mock import patch
 
 
 from env import app
@@ -56,7 +56,7 @@ with app.app_context():
             assert expected_result == r.json()
 
 
-        @patch('api.AddDiagnosis.find_in_db', return_value=1)
+        '''@patch('api.AddDiagnosis.find_in_db', return_value=1)
         def test_find_None_record(self, find_in_db):
             diagnosis = AddDiagnosis()
             rec = diagnosis.find_record('login2', find_in_db)
@@ -66,6 +66,7 @@ with app.app_context():
         def test_sign_in_user(self, find_in_db):
                 user = Users('login1', 'password1')
                 assert user.sign_up(find_in_db) == 'user_space'
+                ''''
 
         def test_get_news(self):
             expected_result = "Ok"
