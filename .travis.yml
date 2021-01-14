@@ -5,4 +5,4 @@ install:
   - pip install -r requirements.txt
 script:
   - python unit/unit_tests.py
-  - sudo python integration/api.py & integration/integration_tests.py
+  - sudo python integration/api.py & sudo python integration/integration_tests.py
