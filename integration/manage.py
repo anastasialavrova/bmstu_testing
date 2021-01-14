@@ -1,4 +1,4 @@
 import subprocess 
 
 
-subprocess.run("python api.py & python integration_tests.py", shell=True)
+subprocess.run("python integration/api.py & python integration/integration_tests.py", shell=True)
