@@ -6,3 +6,4 @@ flasgger
 Werkzeug
 flask_jwt_extended
 requests
+flask_restplus
