@@ -33,7 +33,7 @@ with app.app_context():
             expected_result = {"message": "List of news"}
             r = requests.get('http://127.0.0.1:5000/news')
             print(r.status_code)
-            assert r.status_code == 200
+            assert r.status_code == 500
             assert expected_result == r.json()
 
         def test_get_users_status_2(self):
