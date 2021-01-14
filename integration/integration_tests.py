@@ -4,9 +4,9 @@ import json
 from mock import patch
 
 
-from tests.integration import app
-from tests.integration.api import AddDiagnosis, Users
-from tests.integration.models import User
+from env import app
+from api import AddDiagnosis, Users
+from models import User
 
 from werkzeug.security import generate_password_hash
 

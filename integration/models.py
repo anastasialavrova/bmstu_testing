@@ -1,7 +1,7 @@
 from datetime import date, datetime
 from flask_login import UserMixin
 
-from tests.unit import db
+from env import db
 
 class News(db.Model):
     __tablename__ = 'news'

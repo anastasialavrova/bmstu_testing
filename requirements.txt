@@ -2,3 +2,6 @@ flask
 flask_login
 flask_sqlalchemy
 mock
+flasgger
+Werkzeug
+flask_jwt_extended

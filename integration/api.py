@@ -6,8 +6,8 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_required, jwt_refresh_token_required, get_jwt_identity,  get_raw_jwt)
 
 
-from clinic import app, api, login_manager
-from clinic.models import News, Doctors, Record, User
+from env import app, api, login_manager
+from models import News, Doctors, Record, User
 
 
 @login_manager.user_loader
