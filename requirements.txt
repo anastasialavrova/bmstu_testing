@@ -3,7 +3,7 @@ flask_login
 flask_sqlalchemy
 mock
 flasgger
-Werkzeug
+Werkzeug==0.14.1
 flask_jwt_extended
 requests
-flask-restplus
+flask-restplus==0.13.0
