@@ -45,9 +45,11 @@ with app.app_context():
             assert expected_result == r.json()
 
         def test_get_users_status_3(self):
-            expected_result = {"text": "hi", "title": "mark"}
+            expected_result = {"text": "mark", "title": "hi"}
             r = requests.post('http://127.0.0.1:5000/news?news_title=hi&news_text=mark')
             assert r.status_code == 200
+            print(r.json())
+            print (expected_result)
             assert expected_result == r.json()
 
         @patch('api.AddDiagnosis.find_in_db', return_value=1)
