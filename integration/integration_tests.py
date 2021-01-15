@@ -31,13 +31,6 @@ with app.app_context():
             app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
             db.create_all()
 
-        # def test_get_users_status(self):
-        #     expected_result = {"message": "List of news"}
-        #     r = requests.get('http://127.0.0.1:5000/news')
-        #     print(r.status_code)
-        #     assert r.status_code == 500
-        #     assert expected_result == r.json()
-
         def test_get_users_status_2(self):
             expected_result = {"text": "text", "title": "title"}
             r = requests.post('http://127.0.0.1:5000/news?news_title=title&news_text=text')
@@ -48,8 +41,6 @@ with app.app_context():
             expected_result = {"text": "mark", "title": "hi"}
             r = requests.post('http://127.0.0.1:5000/news?news_title=hi&news_text=mark')
             assert r.status_code == 200
-            print(r.json())
-            print (expected_result)
             assert expected_result == r.json()
 
         @patch('api.AddDiagnosis.find_in_db', return_value=1)

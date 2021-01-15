@@ -31,11 +31,11 @@ with app.app_context():
         def setUp(self):
             self.app = app.test_client()
 
-        def test_get_news(self):
-            expected_result = {"message": "List of news"}
-            r = requests.get('http://127.0.0.1:5000/news')
-            assert r.status_code == 200
-            assert expected_result == r.json()
+        # def test_get_news(self):
+        #     expected_result = {"message": "List of news"}
+        #     r = requests.get('http://127.0.0.1:5000/news')
+        #     assert r.status_code == 200
+        #     assert expected_result == r.json()
 
         def test_post_news(self):
             expected_result = {"text": "text", "title": "title"}
