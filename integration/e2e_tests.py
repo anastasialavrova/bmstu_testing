@@ -50,8 +50,6 @@ with app.app_context():
             # r = requests.get('http://127.0.0.1:5000/user_space')
             # assert r.status_code == 200
 
-            r = requests.get('http://127.0.0.1:5000/user_space')
-            assert r.status_code == 200
 
         def tearDown(self):
             db.session.remove()
