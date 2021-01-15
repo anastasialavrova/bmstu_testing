@@ -47,8 +47,8 @@ with app.app_context():
             assert r.status_code == 200
             assert expected_result == r.json()
 
-            r = requests.get('http://127.0.0.1:5000/user_space')
-            assert r.status_code == 200
+            # r = requests.get('http://127.0.0.1:5000/user_space')
+            # assert r.status_code == 200
 
             r = requests.get('http://127.0.0.1:5000/user_space')
             assert r.status_code == 200
