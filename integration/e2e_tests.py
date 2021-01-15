@@ -4,7 +4,7 @@ import os
 # from mock import patch
 
 
-from env import app
+from env import app, db
 from api import AddDiagnosis, Users
 from models import User, Doctors
 
